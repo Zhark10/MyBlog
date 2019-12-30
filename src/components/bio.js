@@ -14,9 +14,9 @@ import { rhythm } from "../utils/typography"
 const Bio = () => {
   const data = useStaticQuery(graphql`
     query BioQuery {
-      avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
+      avatar: file(absolutePath: { regex: "/profile-pic.png/" }) {
         childImageSharp {
-          fixed(width: 50, height: 50) {
+          fixed(width: 60, height: 80) {
             ...GatsbyImageSharpFixed
           }
         }
@@ -24,15 +24,13 @@ const Bio = () => {
       site {
         siteMetadata {
           author
-          social {
-            twitter
-          }
+          siteUrl
         }
       }
     }
   `)
 
-  const { author, social } = data.site.siteMetadata
+  const { author, siteUrl } = data.site.siteMetadata
   return (
     <div
       style={{
@@ -45,8 +43,6 @@ const Bio = () => {
         alt={author}
         style={{
           marginRight: rhythm(1 / 2),
-          marginBottom: 0,
-          minWidth: 50,
           borderRadius: `100%`,
         }}
         imgStyle={{
@@ -54,11 +50,10 @@ const Bio = () => {
         }}
       />
       <p>
-        Written by <strong>{author}</strong> who lives and works in San
-        Francisco building useful things.
+        Written by <strong>{author}</strong> who lives and works in Yoshkar-Ola <br/>
         {` `}
-        <a href={`https://twitter.com/${social.twitter}`}>
-          You should follow him on Twitter
+        <a href={siteUrl}>
+          vk profile
         </a>
       </p>
     </div>
