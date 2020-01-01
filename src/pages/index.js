@@ -6,33 +6,51 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
 
-class BlogIndex extends React.Component {
-  render() {
-    const { data } = this.props
-    const siteTitle = data.site.siteMetadata.title
-    const posts = data.allMarkdownRemark.edges
+const BlogIndex = ({ data, location }) => {
+  const siteTitle = data.site.siteMetadata.title
+  const posts = data.allMarkdownRemark.edges
 
-    return (
-      <Layout location={this.props.location} title={siteTitle}>
-        <SEO title="All posts" />
-        <Bio />
-        {posts.map(({ node }) => {
-          const title = node.frontmatter.title || node.fields.slug
-          return (
-            <article key={node.fields.slug}>
+  return (
+    <Layout location={location} title={siteTitle}>
+      <SEO title="All posts" />
+      <Bio />
+      {posts.map(({ node }) => {
+        const title = node.frontmatter.title || node.fields.slug
+        return (
+          <Link
+            key={node.fields.slug}
+            style={{ boxShadow: `none` }}
+            to={node.fields.slug}
+          >
+            <article
+              style={{
+                // border: '1px solid #007acc',
+                boxShadow: '0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)',
+                // boxShadow: '0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)',
+                transition: 'all 0.3s cubic-bezier(.25,.8,.25,1)',
+                padding: '1px 32px',
+                margin: '16px 0',
+                cursor: 'pointer',
+              }}>
               <header>
                 <h3
                   style={{
                     marginBottom: rhythm(1 / 4),
                   }}
                 >
-                  <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                    {title}
-                  </Link>
+                  {title}
                 </h3>
-                <small>{node.frontmatter.date}</small>
+                <small
+                  style={{
+                    color: '#000'
+                  }}
+                >{node.frontmatter.date}</small>
               </header>
-              <section>
+              <section
+                style={{
+                  color: '#000'
+                }}
+              >
                 <p
                   dangerouslySetInnerHTML={{
                     __html: node.frontmatter.description || node.excerpt,
@@ -40,11 +58,11 @@ class BlogIndex extends React.Component {
                 />
               </section>
             </article>
-          )
-        })}
-      </Layout>
-    )
-  }
+          </Link >
+        )
+      })}
+    </Layout >
+  )
 }
 
 export default BlogIndex

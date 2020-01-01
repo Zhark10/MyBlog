@@ -63,7 +63,11 @@ class Layout extends React.Component {
       >
         <header>{header}</header>
         <main>{children}</main>
-        <footer>
+        <footer style={{
+          margin: '0 16px',
+          display: 'flex',
+          justifyContent: 'flex-end'
+        }}>
           © {new Date().getFullYear()}, Йошкар-Ола
           {` `}
         </footer>
