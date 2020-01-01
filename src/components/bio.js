@@ -35,6 +35,7 @@ const Bio = () => {
     <div
       style={{
         display: `flex`,
+        alignItems: 'center',
         marginBottom: rhythm(2.5),
       }}
     >
@@ -44,18 +45,19 @@ const Bio = () => {
         style={{
           marginRight: rhythm(1 / 2),
           borderRadius: `100%`,
+          minWidth: '60px',
         }}
         imgStyle={{
           borderRadius: `50%`,
         }}
       />
-      <p>
-        Written by <strong>{author}</strong> who lives and works in Yoshkar-Ola <br/>
+      <div>
+        Меня зовут <strong>{author}</strong>. Скорее всего, ты попал(-а) сюда с моего профиля vk, но если это не так, ты всегда можешь найти меня 
         {` `}
         <a href={siteUrl}>
-          vk profile
+          здесь
         </a>
-      </p>
+      </div>
     </div>
   )
 }

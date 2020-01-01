@@ -1,22 +1,36 @@
 ---
-title: Hello World
+title: Потукснели
 date: "2015-05-01T22:12:03.284Z"
-description: "Hello World"
+description: "При всем моем жизнелюбии время от времени приходит желание писать о наболевшем. Вспоминаю детство, яркие моменты из моей жизни в родном городе, когда я был еще совсем ребенком. Данные строки просто отражают мой взгляд на состояние современного общества, которое потускнело в морально-нравственном плане."
 ---
 
-This is my first post on my new fake blog! How exciting!
-
-I'm sure I'll write a lot more interesting things in the future.
-
-Oh, and here's a great quote from this Wikipedia on
-[salted duck eggs](http://en.wikipedia.org/wiki/Salted_duck_egg).
-
-> A salted duck egg is a Chinese preserved food product made by soaking duck
-> eggs in brine, or packing each egg in damp, salted charcoal. In Asian
-> supermarkets, these eggs are sometimes sold covered in a thick layer of salted
-> charcoal paste. The eggs may also be sold with the salted paste removed,
-> wrapped in plastic, and vacuum packed. From the salt curing process, the
-> salted duck eggs have a briny aroma, a gelatin-like egg white and a
-> firm-textured, round yolk that is bright orange-red in color.
-
-![Chinese Salty Egg](./salty_egg.jpg)
+>  Я словно где-то там..., где Родина моя,
+>  Где вряд ли встретишь обреченность серых масс.
+>  Там не страдать мне от отсутствия взаимности,
+>  Взаимность возникает тот же час.
+>  
+>  Я где-то там... Где людям в радость жизнь,
+>  Где нет ни критик, ни страдания, ни лжи,
+>  Нет лицемерия... не выделяют наций, рас,
+>  Где общество - один большой каркас.
+>  
+>  И, да... душой я там..., где никогда никто
+>  Не смеет даже вздумать посягать на чью-то волю,
+>  Ведь наша миссия - творить добро,
+>  А мы не в силах сделать так, чтоб каждый был доволен?
+>  
+>  А там, увидев хмурое, несчастное лицо,
+>  Своей энергией я непременно поделюсь,
+>  Пойду навстречу, улыбнусь, вдруг снимет грусть...
+>  Иначе окажусь я подлецом...
+>  
+>  Но здесь во всяком ненависть и злоба,
+>  Всё, что должно быть в норме, - исключения.
+>  Я про любовь, про искренность, свободу.
+>  Не возродить, увы, всего... ведь нет стремленья.
+>  
+>  Стремленья к обоюдной теплоте,
+>  К своей мечте, идее, к достиженью цели,
+>  Мы, к сожаленью, все порядком потускнели,
+>  Раньше глаза у всех нас будто бы горели!
+>  Теперь они не те...

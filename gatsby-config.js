@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `It's my blog`,
-    author: `Arkady Zharavin`,
-    description: `A starter blog demonstrating what Gatsby can do.`,
+    title: `Блог стихов`,
+    author: `Жаравин Аркадий`,
+    description: `Просто решил, что все это должно где-то храниться и быть доступным для тех, кого интересует поэзия`,
     siteUrl: `https://vk.com/a.zharavin`,
   },
   plugins: [
