@@ -36,7 +36,11 @@ const Bio = () => {
       style={{
         display: `flex`,
         alignItems: 'center',
-        marginBottom: rhythm(2.5),
+        marginBottom: '16px',
+        border: '1px solid #007acc',
+        borderTopRightRadius: '50px',
+        borderBottomRightRadius: '50px',
+        padding: '16px'
       }}
     >
       <Image
@@ -52,7 +56,7 @@ const Bio = () => {
         }}
       />
       <div>
-        Меня зовут <strong>{author}</strong>. Скорее всего, ты попал(-а) сюда с моего профиля vk, но если это не так, ты всегда можешь найти меня 
+        Меня зовут <strong>{author}</strong>. Скорее всего, ты попал(-а) сюда с моего профиля vk, но если это не так, ты всегда можешь найти меня
         {` `}
         <a href={siteUrl}>
           здесь

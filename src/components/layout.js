@@ -23,11 +23,14 @@ class Layout extends React.Component {
               boxShadow: `none`,
               textDecoration: `none`,
               color: `inherit`,
-              fontSize: 48
+              fontSize: 48,
             }}
             to={`/`}
           >
-            {title}
+            <span style={{
+              color: '#007acc',
+              marginRight: '32px'
+            }}>&#9997;</span> {title}
           </Link>
         </h1>
       )
@@ -47,7 +50,7 @@ class Layout extends React.Component {
             }}
             to={`/`}
           >
-            {title}
+            &#8656; {title}
           </Link>
         </h3>
       )

@@ -24,8 +24,10 @@ class BlogPostTemplate extends React.Component {
               style={{
                 marginTop: rhythm(1),
                 marginBottom: 0,
+                textAlign: 'center',
+                paddingRight: '32px'
               }}
-            >
+              >
               {post.frontmatter.title}
             </h1>
             <p
@@ -33,12 +35,14 @@ class BlogPostTemplate extends React.Component {
                 ...scale(-1 / 5),
                 display: `block`,
                 marginBottom: rhythm(1),
+                textAlign: 'center',
+                paddingRight: '32px'
               }}
             >
               {post.frontmatter.date}
             </p>
           </header>
-          <section dangerouslySetInnerHTML={{ __html: post.html }} />
+          <section dangerouslySetInnerHTML={{ __html: post.html }} style={{textAlign: 'center'}}/>
           <hr
             style={{
               marginBottom: rhythm(1),
@@ -59,17 +63,23 @@ class BlogPostTemplate extends React.Component {
               padding: 0,
             }}
           >
-            <li>
+            <li style={{
+              fontSize: '18px',
+              fontWeight: '800'
+            }}>
               {previous && (
                 <Link to={previous.fields.slug} rel="prev">
-                  ← {previous.frontmatter.title}
+                  &#8656; {previous.frontmatter.title}
                 </Link>
               )}
             </li>
-            <li>
+            <li style={{
+              fontSize: '18px',
+              fontWeight: '800'
+            }}>
               {next && (
                 <Link to={next.fields.slug} rel="next">
-                  {next.frontmatter.title} →
+                  {next.frontmatter.title} &#8658;
                 </Link>
               )}
             </li>
