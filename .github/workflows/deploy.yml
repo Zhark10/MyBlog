@@ -13,17 +13,19 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-#     - name: Checkout
-#       uses: actions/checkout@v1
+    - name: Checkout
+      uses: actions/checkout@v1
       
     - name: Build
       run: |
-        echo "${{ secrets.ACTIONS_DEPLOY_KEY }}"
+        yarn install
+        yarn build
+        echo ${{ secrets.ACTIONS_DEPLOY_KEY }}
         
-#     - name: Deploy to GitHub Pages
-#       uses: JamesIves/github-pages-deploy-action@3.1.1
-#       with:
-#         ACCESS_TOKEN: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-#         BRANCH: gh-pages
-#         FOLDER: public
+    - name: Deploy to GitHub Pages
+      uses: JamesIves/github-pages-deploy-action@3.1.1
+      with:
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        BRANCH: gh-pages
+        FOLDER: public
 
