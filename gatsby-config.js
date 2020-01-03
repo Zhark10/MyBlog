@@ -1,6 +1,3 @@
-if (process.env.NODE_ENV === "development") {
-  require("dotenv").config();
-}
 module.exports = {
   siteMetadata: {
     title: `Блог стихов`,
@@ -72,13 +69,6 @@ module.exports = {
       resolve: `gatsby-plugin-typography`,
       options: {
         pathToConfigModule: `src/utils/typography`,
-      },
-    },
-    {
-      resolve: `gatsby-source-contentful`,
-      options: {
-        spaceId: process.env.CONTENTFUL_SPACE_ID,
-        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
     }
   ],
