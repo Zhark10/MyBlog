@@ -25,5 +25,5 @@ jobs:
       uses: crazy-max/ghaction-github-pages@v1.2.5
       with:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        BRANCH: gh-pages
+        BRANCH: master
         FOLDER: public
