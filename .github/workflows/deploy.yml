@@ -21,9 +21,10 @@ jobs:
         yarn install
         yarn build
         
-    - name: Build and Deploy
-      uses: JamesIves/github-pages-deploy-action@releases/v3
+    - name: Deploy to GitHub Pages
+      uses: JamesIves/github-pages-deploy-action@3.1.1
       with:
         ACCESS_TOKEN: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-        BRANCH: gh-pages # The branch the action should deploy to.
-        FOLDER: public # The folder the action should deploy.
+        BRANCH: gh-pages
+        FOLDER: public
+
