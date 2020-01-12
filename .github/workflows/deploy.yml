@@ -22,9 +22,9 @@ jobs:
         yarn build
         
     - name: Deploy to GitHub Pages
-      uses: JamesIves/github-pages-deploy-action@3.1.1
+      uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         BRANCH: gh-pages
-        FOLDER: public
+        FOLDER: build
 
