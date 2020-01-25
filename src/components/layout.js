@@ -25,12 +25,17 @@ class Layout extends React.Component {
               color: `inherit`,
               fontSize: 48,
             }}
-            to={`/`}
+            to="/"
           >
-            <span style={{
-              color: '#007acc',
-              marginRight: '32px'
-            }}>&#9997;</span> {title}
+            <span
+              style={{
+                color: "#007acc",
+                marginRight: "32px",
+              }}
+            >
+              &#9997;
+            </span>{" "}
+            {title}
           </Link>
         </h1>
       )
@@ -48,7 +53,7 @@ class Layout extends React.Component {
               textDecoration: `none`,
               color: `inherit`,
             }}
-            to={`/`}
+            to="/"
           >
             &#8656; {title}
           </Link>
@@ -66,11 +71,13 @@ class Layout extends React.Component {
       >
         <header>{header}</header>
         <main>{children}</main>
-        <footer style={{
-          margin: '0 16px',
-          display: 'flex',
-          justifyContent: 'flex-end'
-        }}>
+        <footer
+          style={{
+            margin: "0 16px",
+            display: "flex",
+            justifyContent: "flex-end",
+          }}
+        >
           © {new Date().getFullYear()}, Йошкар-Ола
           {` `}
         </footer>

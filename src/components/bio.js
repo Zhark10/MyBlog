@@ -35,12 +35,12 @@ const Bio = () => {
     <div
       style={{
         display: `flex`,
-        alignItems: 'center',
-        marginBottom: '16px',
-        border: '1px solid #007acc',
-        borderTopRightRadius: '50px',
-        borderBottomRightRadius: '50px',
-        padding: '16px'
+        alignItems: "center",
+        marginBottom: "16px",
+        border: "1px solid #007acc",
+        borderTopRightRadius: "50px",
+        borderBottomRightRadius: "50px",
+        padding: "16px",
       }}
     >
       <Image
@@ -49,18 +49,17 @@ const Bio = () => {
         style={{
           marginRight: rhythm(1 / 2),
           borderRadius: `100%`,
-          minWidth: '60px',
+          minWidth: "60px",
         }}
         imgStyle={{
           borderRadius: `50%`,
         }}
       />
       <div>
-        Меня зовут <strong>{author}</strong>. Скорее всего, ты попал(-а) сюда с моего профиля vk, но если это не так, ты всегда можешь найти меня
+        Меня зовут <strong>{author}</strong>. Скорее всего, ты попал(-а) сюда с
+        моего профиля vk, но если это не так, ты всегда можешь найти меня
         {` `}
-        <a href={siteUrl}>
-          здесь
-        </a>
+        <a href={siteUrl}>здесь</a>
       </div>
     </div>
   )

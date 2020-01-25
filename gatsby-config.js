@@ -1,4 +1,4 @@
-var START_URL = process.env.NODE_ENV === 'production' ? '/started-blog/' : '/';
+var START_URL = process.env.NODE_ENV === "production" ? "/started-blog/" : "/"
 
 module.exports = {
   pathPrefix: START_URL,
@@ -73,6 +73,6 @@ module.exports = {
       options: {
         pathToConfigModule: `src/utils/typography`,
       },
-    }
+    },
   ],
 }
