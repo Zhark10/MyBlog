@@ -1,3 +1,4 @@
+/* eslint-disable no-var */
 var START_URL = process.env.NODE_ENV === "production" ? "/started-blog/" : "/"
 
 module.exports = {

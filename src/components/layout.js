@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/accessible-emoji */
 import React from "react"
 import { Link } from "gatsby"
 
@@ -62,9 +63,10 @@ const Layout = ({ location, title, children }) => {
   return (
     <div
       style={{
+        backgroundColor: "#f9f7f1",
         marginLeft: `auto`,
         marginRight: `auto`,
-        maxWidth: rhythm(24),
+        maxWidth: "100%",
         padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
       }}
     >
