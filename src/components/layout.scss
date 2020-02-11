@@ -1,4 +1,8 @@
-* {
-  font-family: "Playfair Display"; 
-  color: 'red';
+.main-title {
+  font-family: "Playfair Display";
+  font-weight: 900;
+  font-size: 80px;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
 }

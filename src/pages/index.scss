@@ -1,0 +1,17 @@
+.articles {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+  height: 1000px;
+
+  article {
+    width: 33rem;
+    border-right: 1px solid #000;
+    h3 {
+        margin: 0;
+        color: #000;
+    }
+  }
+}

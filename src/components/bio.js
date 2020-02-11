@@ -37,9 +37,7 @@ const Bio = () => {
         display: `flex`,
         alignItems: "center",
         marginBottom: "16px",
-        border: "1px solid #007acc",
-        borderTopRightRadius: "50px",
-        borderBottomRightRadius: "50px",
+        borderTop: "1px solid #000",
         padding: "16px",
       }}
     >
