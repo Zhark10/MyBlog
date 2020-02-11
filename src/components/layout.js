@@ -4,6 +4,8 @@ import { Link } from "gatsby"
 
 import { rhythm, scale } from "../utils/typography"
 
+import "./layout.scss"
+
 const Layout = ({ location, title, children }) => {
   // eslint-disable-next-line no-undef
   const rootPath = `${__PATH_PREFIX__}/`
