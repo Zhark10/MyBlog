@@ -19,16 +19,16 @@ const BlogIndex = ({ data, location }) => {
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
           return (
-            <Link
-              key={node.fields.slug}
-              style={{ boxShadow: `none` }}
-              to={node.fields.slug}
+            <article
+              style={{
+                transition: "all 0.3s cubic-bezier(.25,.8,.25,1)",
+                cursor: "pointer",
+              }}
             >
-              <article
-                style={{
-                  transition: "all 0.3s cubic-bezier(.25,.8,.25,1)",
-                  cursor: "pointer",
-                }}
+              <Link
+                key={node.fields.slug}
+                style={{ boxShadow: `none` }}
+                to={node.fields.slug}
               >
                 <header
                   style={{
@@ -60,8 +60,8 @@ const BlogIndex = ({ data, location }) => {
                     }}
                   />
                 </section>
-              </article>
-            </Link>
+              </Link>
+            </article>
           )
         })}
       </div>
