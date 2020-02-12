@@ -1,8 +1,6 @@
 /* eslint-disable jsx-a11y/accessible-emoji */
 import React from "react"
-import { Link } from "gatsby"
-
-import { rhythm, scale } from "../utils/typography"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 import "./layout.scss"
 
@@ -14,7 +12,7 @@ const Layout = ({ location, title, children }) => {
   if (location.pathname === rootPath) {
     header = (
       <div className="main-title">
-        <Link
+        <AniLink
           style={{
             boxShadow: `none`,
             textDecoration: `none`,
@@ -23,7 +21,7 @@ const Layout = ({ location, title, children }) => {
           to="/"
         >
           {title}
-        </Link>
+        </AniLink>
       </div>
     )
   } else {
@@ -34,7 +32,7 @@ const Layout = ({ location, title, children }) => {
           marginTop: 0,
         }}
       >
-        <Link
+        <AniLink
           style={{
             boxShadow: `none`,
             textDecoration: `none`,
@@ -43,7 +41,7 @@ const Layout = ({ location, title, children }) => {
           to="/"
         >
           &#8656; {title}
-        </Link>
+        </AniLink>
       </h3>
     )
   }

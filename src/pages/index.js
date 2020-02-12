@@ -1,5 +1,7 @@
+/* eslint-disable react/no-array-index-key */
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
@@ -16,19 +18,26 @@ const BlogIndex = ({ data, location }) => {
       <SEO title="All posts" />
       <Bio />
       <div className="articles">
-        {posts.map(({ node }) => {
+        {posts.map(({ node }, index) => {
           const title = node.frontmatter.title || node.fields.slug
           return (
-            <article
-              style={{
-                transition: "all 0.3s cubic-bezier(.25,.8,.25,1)",
-                cursor: "pointer",
-              }}
-            >
-              <Link
+            <article key={index}>
+              <AniLink
+                cover
                 key={node.fields.slug}
                 style={{ boxShadow: `none` }}
                 to={node.fields.slug}
+                direction="left"
+                duration={1}
+                bg="
+                  url(http://via.placeholder.com/640x360)
+                  center / cover   /* position / size */
+                  no-repeat        /* repeat */
+                  fixed            /* attachment */
+                  padding-box      /* origin */
+                  content-box      /* clip */
+                  white            /* color */
+                "
               >
                 <header
                   style={{
@@ -60,7 +69,7 @@ const BlogIndex = ({ data, location }) => {
                     }}
                   />
                 </section>
-              </Link>
+              </AniLink>
             </article>
           )
         })}

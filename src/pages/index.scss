@@ -1,3 +1,7 @@
+* {
+  color: #404040;
+}
+
 .articles {
   display: flex;
   flex-direction: row;
@@ -8,17 +12,21 @@
 
   article {
     border-right: 1px solid #000;
+    padding: 10px;
     width: 17.5%;
     height: min-content;
+    cursor: pointer;
     h3 {
       margin: 0;
-      color: #000;
+    }
+    header {
+      color: #404040,
     }
   }
 
-  @media only all and (max-width: 600px) {
+  @media only all and (max-width: 1200px) {
     article {
-      width: 100%;
+      width: 31%;
     }
   }
   @media only all and (max-width: 900px) {
@@ -26,9 +34,9 @@
       width: 47%;
     }
   }
-  @media only all and (max-width: 1200px) {
+  @media only all and (max-width: 600px) {
     article {
-      width: 31%;
+      width: 100%;
     }
   }
 }
