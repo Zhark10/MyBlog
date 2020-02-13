@@ -23,21 +23,11 @@ const BlogIndex = ({ data, location }) => {
           return (
             <article key={index}>
               <AniLink
-                cover
                 key={node.fields.slug}
                 style={{ boxShadow: `none` }}
                 to={node.fields.slug}
-                direction="left"
+                swipe
                 duration={1}
-                bg="
-                  url(http://via.placeholder.com/640x360)
-                  center / cover   /* position / size */
-                  no-repeat        /* repeat */
-                  fixed            /* attachment */
-                  padding-box      /* origin */
-                  content-box      /* clip */
-                  white            /* color */
-                "
               >
                 <header
                   style={{

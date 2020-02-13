@@ -74,7 +74,22 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             }}
           >
             {previous && (
-              <AniLink to={previous.fields.slug} rel="prev">
+              <AniLink
+                cover
+                to={previous.fields.slug}
+                rel="prev"
+                direction="right"
+                duration={1}
+                bg="
+                  url(http://cdn02.overnature.net/1920/158-grama.jpg)
+                  center / cover   /* position / size */
+                  no-repeat        /* repeat */
+                  fixed            /* attachment */
+                  padding-box      /* origin */
+                  content-box      /* clip */
+                  white            /* color */
+                "
+              >
                 &#8656; {previous.frontmatter.title}
               </AniLink>
             )}
@@ -86,7 +101,22 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             }}
           >
             {next && (
-              <AniLink to={next.fields.slug} rel="next">
+              <AniLink
+                cover
+                to={next.fields.slug}
+                rel="next"
+                direction="left"
+                duration={1}
+                bg="
+                  url(http://cdn02.overnature.net/1920/158-grama.jpg)
+                  center / cover   /* position / size */
+                  no-repeat        /* repeat */
+                  fixed            /* attachment */
+                  padding-box      /* origin */
+                  content-box      /* clip */
+                  white            /* color */
+                "
+              >
                 {next.frontmatter.title} &#8658;
               </AniLink>
             )}

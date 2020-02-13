@@ -7,20 +7,37 @@ import "./layout.scss"
 const Layout = ({ location, title, children }) => {
   // eslint-disable-next-line no-undef
   const rootPath = `${__PATH_PREFIX__}/`
+
   let header
 
   if (location.pathname === rootPath) {
     header = (
       <div className="main-title">
         <AniLink
+          cover
           style={{
             boxShadow: `none`,
             textDecoration: `none`,
             color: `inherit`,
           }}
           to="/"
+          direction="right"
+          duration={1}
+          bg="
+                  url(http://cdn02.overnature.net/1920/158-grama.jpg)
+                  center / cover   /* position / size */
+                  no-repeat        /* repeat */
+                  fixed            /* attachment */
+                  padding-box      /* origin */
+                  content-box      /* clip */
+                  white            /* color */
+                "
         >
-          {title}
+          <div className="title">{title}</div>
+          <div className="author-name">
+            <span>Жаравина</span>
+            <span>Аркадия</span>
+          </div>
         </AniLink>
       </div>
     )
@@ -33,12 +50,24 @@ const Layout = ({ location, title, children }) => {
         }}
       >
         <AniLink
+          cover
           style={{
             boxShadow: `none`,
             textDecoration: `none`,
             color: `inherit`,
           }}
           to="/"
+          direction="right"
+          duration={1}
+          bg="
+                  url(http://cdn02.overnature.net/1920/158-grama.jpg)
+                  center / cover   /* position / size */
+                  no-repeat        /* repeat */
+                  fixed            /* attachment */
+                  padding-box      /* origin */
+                  content-box      /* clip */
+                  white            /* color */
+                "
         >
           &#8656; {title}
         </AniLink>
