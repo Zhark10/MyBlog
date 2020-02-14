@@ -31,13 +31,6 @@ const BlogIndex = ({ data, location }) => {
               >
                 <header>
                   <h3>{title}</h3>
-                  <small
-                    style={{
-                      color: "#000",
-                    }}
-                  >
-                    {node.frontmatter.date}
-                  </small>
                 </header>
                 <section className="article-description">
                   <p
@@ -56,6 +49,13 @@ const BlogIndex = ({ data, location }) => {
                     }}
                   />
                 </section>
+                <small
+                  style={{
+                    color: "#000",
+                  }}
+                >
+                  {node.frontmatter.date}
+                </small>
               </AniLink>
             </article>
           )

@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway');
-@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+@import url("https://fonts.googleapis.com/css?family=Lobster&display=swap");
 
 * {
   color: #404040;
@@ -42,27 +42,39 @@ body {
 
   article {
     border-right: 2px solid #404040;
+    border-bottom: 2px solid #404040;
     margin: 10px;
     width: 17.5%;
     height: min-content;
     display: flex;
     cursor: pointer;
-    
+
     header {
       display: flex;
-      justify-content: space-between;
-      padding: 12px;
+      justify-content: flex-end;
+      padding: 18px;
       border-bottom: 2px solid #404040;
       color: #404040;
 
       h3 {
         margin: 0;
-        font-family: 'Lobster', cursive;
+        font-family: "Lobster", cursive;
         font-weight: 300;
       }
     }
+
+    small {
+      display: flex;
+      justify-content: flex-start;
+      max-width: 94%;
+      padding: 8px 0 8px 16px;
+      border-top: 2px solid #404040;
+      border-left: 2px solid #404040;
+      color: #404040;
+      z-index: 2;
+    }
     .article-description {
-      padding: 16px;  
+      padding: 16px;
     }
   }
 
