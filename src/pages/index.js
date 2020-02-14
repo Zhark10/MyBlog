@@ -39,12 +39,7 @@ const BlogIndex = ({ data, location }) => {
                     {node.frontmatter.date}
                   </small>
                 </header>
-                <section
-                  style={{
-                    color: "#000",
-                    padding: "16px 32px",
-                  }}
-                >
+                <section className="article-description">
                   <p
                     // eslint-disable-next-line react/no-danger
                     dangerouslySetInnerHTML={{

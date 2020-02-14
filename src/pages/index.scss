@@ -47,15 +47,22 @@ body {
     height: min-content;
     display: flex;
     cursor: pointer;
-    h3 {
-      margin: 0;
-      font-family: 'Lobster', cursive;
-      font-weight: 300;
-    }
+    
     header {
+      display: flex;
+      justify-content: space-between;
       padding: 12px;
       border-bottom: 2px solid #404040;
       color: #404040;
+
+      h3 {
+        margin: 0;
+        font-family: 'Lobster', cursive;
+        font-weight: 300;
+      }
+    }
+    .article-description {
+      padding: 16px;  
     }
   }
 
