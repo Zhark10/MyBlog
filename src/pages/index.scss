@@ -1,11 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
+
 * {
+  color: #404040;
+}
+
+a {
   color: #404040;
 }
 
 body {
   background-color: #f9f7f1;
   div {
-    background: #fff url(https://subtlepatterns.com/patterns/lightpaperfibers.png);
+    background: #fff
+      url(https://subtlepatterns.com/patterns/lightpaperfibers.png);
   }
 }
 
@@ -13,23 +21,41 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
   align-content: flex-start;
   width: 100%;
-  border-top: 1px solid #404040;
 
+  position: relative;
+  z-index: 1;
+  background-color: #f5f5f5;
+  color: #404040;
+
+  :before {
+    content: "";
+    position: absolute;
+    right: 45px;
+    top: 0;
+    height: 2px;
+    width: 90%;
+    border-top: 5px solid #404040;
+  }
 
   article {
-    border-right: 1px solid #404040;
-    padding: 10px;
+    border-right: 2px solid #404040;
+    margin: 10px;
     width: 17.5%;
     height: min-content;
+    display: flex;
     cursor: pointer;
     h3 {
       margin: 0;
+      font-family: 'Lobster', cursive;
+      font-weight: 300;
     }
     header {
-      color: #404040,
+      padding: 12px;
+      border-bottom: 2px solid #404040;
+      color: #404040;
     }
   }
 
@@ -39,6 +65,14 @@ body {
     }
   }
   @media only all and (max-width: 900px) {
+    :before {
+      right: 0;
+      top: 0;
+      height: 2px;
+      width: 100%;
+      border-top: 5px solid #404040;
+    }
+
     article {
       width: 47%;
     }

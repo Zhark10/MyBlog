@@ -29,14 +29,7 @@ const BlogIndex = ({ data, location }) => {
                 swipe
                 duration={1}
               >
-                <header
-                  style={{
-                    display: "flex",
-                    padding: "16px",
-                    justifyContent: "space-between",
-                    borderBottom: "1px solid #000",
-                  }}
-                >
+                <header>
                   <h3>{title}</h3>
                   <small
                     style={{
@@ -56,6 +49,15 @@ const BlogIndex = ({ data, location }) => {
                     // eslint-disable-next-line react/no-danger
                     dangerouslySetInnerHTML={{
                       __html: node.frontmatter.description || node.excerpt,
+                    }}
+                  />
+                  <section
+                    // eslint-disable-next-line react/no-danger
+                    dangerouslySetInnerHTML={{ __html: node.frontmatter.image }}
+                    style={{
+                      textAlign: "center",
+                      width: "100px",
+                      height: "100px",
                     }}
                   />
                 </section>
