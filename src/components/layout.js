@@ -34,10 +34,6 @@ const Layout = ({ location, title, children }) => {
                 "
         >
           <div className="title">{title}</div>
-          <div className="author-name">
-            <span>Жаравина</span>
-            <span>Аркадия</span>
-          </div>
         </AniLink>
       </div>
     )
@@ -77,7 +73,6 @@ const Layout = ({ location, title, children }) => {
   return (
     <div
       style={{
-        backgroundColor: "#f9f7f1",
         marginLeft: `auto`,
         marginRight: `auto`,
         maxWidth: "100%",

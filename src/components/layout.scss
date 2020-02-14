@@ -1,41 +1,43 @@
-.main-title a {
-  display: flex;
-  border: 1px solid;
-  flex-wrap: nowrap;
-  justify-content: center;
-  font-family: "Playfair Display";
-  text-transform: uppercase;
-  font-weight: 900;
-
-  .author-name {
-    font-size: 24px;
+.main-title {
+  a {
     display: flex;
+    border: 1px solid;
+    flex-wrap: nowrap;
     justify-content: center;
-    margin-left: 10px;
-    flex-direction: column;
+    font-family: "Playfair Display";
+    text-transform: uppercase;
+    font-weight: 900;
 
-    span {
-      padding: 0;
-    }
-  }
+    .author-name {
+      font-size: 24px;
+      display: flex;
+      justify-content: center;
+      margin-left: 10px;
+      flex-direction: column;
 
-  .title {
-    font-size: 70px;
-  }
+      span {
+        padding: 0;
+      }
+    }
 
-  @media only all and (max-width: 1200px) {
     .title {
-      font-size: 60px;
+      font-size: 70px;
     }
-  }
-  @media only all and (max-width: 900px) {
-    .title {
-      font-size: 50px;
+
+    @media only all and (max-width: 1200px) {
+      .title {
+        font-size: 60px;
+      }
     }
-  }
-  @media only all and (max-width: 600px) {
-    .title {
-      font-size: 40px;
+    @media only all and (max-width: 900px) {
+      .title {
+        font-size: 50px;
+      }
+    }
+    @media only all and (max-width: 600px) {
+      .title {
+        font-size: 40px;
+      }
     }
   }
 }

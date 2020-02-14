@@ -4,12 +4,14 @@ import Image from "gatsby-image"
 
 import { rhythm } from "../utils/typography"
 
+import "./bio.scss"
+
 const Bio = () => {
   const data = useStaticQuery(graphql`
     query BioQuery {
       avatar: file(absolutePath: { regex: "/profile-pic.png/" }) {
         childImageSharp {
-          fixed(width: 60, height: 80) {
+          fixed(width: 80, height: 100) {
             ...GatsbyImageSharpFixed
           }
         }
@@ -25,32 +27,19 @@ const Bio = () => {
 
   const { author, siteUrl } = data.site.siteMetadata
   return (
-    <div
-      style={{
-        display: `flex`,
-        alignItems: "center",
-        marginBottom: "16px",
-        borderTop: "1px solid #000",
-        padding: "16px",
-      }}
-    >
-      <Image
-        fixed={data.avatar.childImageSharp.fixed}
-        alt={author}
-        style={{
-          marginRight: rhythm(1 / 2),
-          borderRadius: `100%`,
-          minWidth: "60px",
-        }}
-        imgStyle={{
-          borderRadius: `50%`,
-        }}
-      />
-      <div>
-        Меня зовут <strong>{author}</strong>. Скорее всего, ты попал(-а) сюда с
-        моего профиля vk, но если это не так, ты всегда можешь найти меня
-        {` `}
-        <a href={siteUrl}>здесь</a>
+    <div className="bio-box">
+      <div className="biography">
+        <Image
+          fixed={data.avatar.childImageSharp.fixed}
+          alt={author}
+          className="biography-image"
+        />
+        <div className="biography-text">
+          Меня зовут <strong>{author}</strong>. Скорее всего, ты попал(-а) сюда
+          с моего профиля vk, но если это не так, ты всегда можешь найти меня
+          {` `}
+          <a href={siteUrl}>здесь</a>
+        </div>
       </div>
     </div>
   )

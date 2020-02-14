@@ -2,6 +2,13 @@
   color: #404040;
 }
 
+body {
+  background-color: #f9f7f1;
+  div {
+    background: #fff url(https://subtlepatterns.com/patterns/lightpaperfibers.png);
+  }
+}
+
 .articles {
   display: flex;
   flex-direction: row;
@@ -9,9 +16,11 @@
   justify-content: space-around;
   align-content: flex-start;
   width: 100%;
+  border-top: 1px solid #404040;
+
 
   article {
-    border-right: 1px solid #000;
+    border-right: 1px solid #404040;
     padding: 10px;
     width: 17.5%;
     height: min-content;
