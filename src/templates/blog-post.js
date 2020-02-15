@@ -50,6 +50,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             dangerouslySetInnerHTML={{ __html: post.html }}
             style={{ textAlign: "center" }}
           />
+          {/* <Typical steps={MESSAGES} loop={Infinity} wrapper="div" /> */}
           <hr
             style={{
               marginBottom: rhythm(1),
