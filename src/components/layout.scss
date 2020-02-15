@@ -6,8 +6,6 @@ $newspaper-bg: url(https://subtlepatterns.com/patterns/lightpaperfibers.png);
   position: relative;
   z-index: 1;
   color: $primary-color;
-  background-color: $light-color;
-  background: $newspaper-bg;
 
   :before {
     content: "";

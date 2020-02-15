@@ -14,24 +14,15 @@ const Layout = ({ location, title, children }) => {
     header = (
       <div className="main-title">
         <AniLink
-          cover
           style={{
             boxShadow: `none`,
             textDecoration: `none`,
             color: `inherit`,
           }}
           to="/"
-          direction="right"
           duration={1}
-          bg="
-                  url(http://cdn02.overnature.net/1920/158-grama.jpg)
-                  center / cover   /* position / size */
-                  no-repeat        /* repeat */
-                  fixed            /* attachment */
-                  padding-box      /* origin */
-                  content-box      /* clip */
-                  white            /* color */
-                "
+          hex="#404040"
+          paintDrip
         >
           <div className="title">{title}</div>
         </AniLink>
@@ -46,24 +37,15 @@ const Layout = ({ location, title, children }) => {
         }}
       >
         <AniLink
-          cover
           style={{
             boxShadow: `none`,
             textDecoration: `none`,
             color: `inherit`,
           }}
           to="/"
-          direction="right"
+          hex="#404040"
           duration={1}
-          bg="
-                  url(http://cdn02.overnature.net/1920/158-grama.jpg)
-                  center / cover   /* position / size */
-                  no-repeat        /* repeat */
-                  fixed            /* attachment */
-                  padding-box      /* origin */
-                  content-box      /* clip */
-                  white            /* color */
-                "
+          paintDrip
         >
           &#8656; {title}
         </AniLink>
