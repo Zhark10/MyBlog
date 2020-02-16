@@ -21,7 +21,7 @@ const Layout = ({ location, title, children }) => {
           }}
           to="/"
           duration={1}
-          hex="#404040"
+          hex="#243040"
           paintDrip
         >
           <div className="title">{title}</div>
@@ -43,11 +43,11 @@ const Layout = ({ location, title, children }) => {
             color: `inherit`,
           }}
           to="/"
-          hex="#404040"
+          hex="#243040"
           duration={1}
           paintDrip
         >
-          &#8656; {title}
+          &#8249; {title}
         </AniLink>
       </h3>
     )

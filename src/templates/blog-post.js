@@ -79,22 +79,16 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             >
               {previous && (
                 <AniLink
-                  cover
+                  style={{
+                    boxShadow: `none`,
+                    textDecoration: `none`,
+                    color: `inherit`,
+                  }}
                   to={previous.fields.slug}
-                  rel="prev"
-                  direction="right"
-                  duration={1}
-                  bg="
-                  url(http://cdn02.overnature.net/1920/158-grama.jpg)
-                  center / cover   /* position / size */
-                  no-repeat        /* repeat */
-                  fixed            /* attachment */
-                  padding-box      /* origin */
-                  content-box      /* clip */
-                  white            /* color */
-                "
+                  swipe
+                  direction="up"
                 >
-                  &#8656; {previous.frontmatter.title}
+                  &#8249; {previous.frontmatter.title}
                 </AniLink>
               )}
             </li>
@@ -106,22 +100,16 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             >
               {next && (
                 <AniLink
-                  cover
+                  style={{
+                    boxShadow: `none`,
+                    textDecoration: `none`,
+                    color: `inherit`,
+                  }}
                   to={next.fields.slug}
-                  rel="next"
-                  direction="left"
-                  duration={1}
-                  bg="
-                  url(http://cdn02.overnature.net/1920/158-grama.jpg)
-                  center / cover   /* position / size */
-                  no-repeat        /* repeat */
-                  fixed            /* attachment */
-                  padding-box      /* origin */
-                  content-box      /* clip */
-                  white            /* color */
-                "
+                  swipe
+                  direction="up"
                 >
-                  {next.frontmatter.title} &#8658;
+                  {next.frontmatter.title} &#8250;
                 </AniLink>
               )}
             </li>

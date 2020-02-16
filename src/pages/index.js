@@ -34,10 +34,10 @@ const BlogIndex = ({ data, location }) => {
 
   return (
     <>
-      <div id="paper-back" onClick={toggleHamburgerIcon}>
+      <div id="paper-back">
         <nav>
-          <div className="close" />
-          <a href="#">Профиль ВК</a>
+          <div className="close" onClick={toggleHamburgerIcon}/>
+          <a href="https://vk.com/a.zharavin">Профиль ВК</a>
           <a href="#">Обо мне</a>
           <a href="#">Работа</a>
           <a href="#">Контакты</a>

@@ -1,12 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway");
 @import url("https://fonts.googleapis.com/css?family=Lobster&display=swap");
-$primary-color: #404040;
+$primary-color: #243040;
 $light-color: #f5f5f5;
 $newspaper-bg: url(https://subtlepatterns.com/patterns/lightpaperfibers.png);
 
 * {
-  color: $primary-color;
-  background-color: $light-color;
   background: $newspaper-bg;
 }
 
@@ -109,8 +107,6 @@ body {
 
 // HAMBURGER
 
-$primary-color: #243040;
-
 body {
   font-family: "Architects Daughter", sans-serif;
 }
@@ -124,24 +120,23 @@ body {
   left: 0;
   font-size: 33px;
   background: $primary-color;
-
+  
   * {
     background: $primary-color;
   }
   nav {
     padding: 120px 34px;
     a {
-      display: block;
+      display: flex;
+      margin: 8px 0;
       font-family: "Lobster", cursive;
       font-size: 24px;
       font-weight: 300;
-      margin-bottom: 25px;
-      color: rgba(#fff, 0.7);
+      color: $light-color;
     }
   }
 }
 
-//prevents the scrolling when the menu is open
 #paper-window {
   height: 100vh;
   width: 100vw;
@@ -159,18 +154,16 @@ body {
   }
 }
 
-//this is what actually rotates
 #paper-front {
   pointer-events: auto;
   position: relative;
   z-index: 3;
-  background-color: #fff;
+  background-color: $light-color;
   box-shadow: 0 0 20px rgba(black, 0.7);
   transform-origin: center 70%;
   transition: all 0.3s ease;
 }
 
-//actual content
 #container {
   section {
     height: 600px;
@@ -251,7 +244,7 @@ body {
     width: 45px;
     height: 6px;
     top: 50%;
-    background-color: #fff;
+    background-color: $light-color;
     border-radius: 2px;
   }
   &:before {
