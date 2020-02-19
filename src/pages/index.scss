@@ -21,13 +21,14 @@ body {
 
 .articles {
   background: $newspaper-bg;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-content: flex-start;
   width: 100%;
-
+  padding: 0 32px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  grid-template-rows: repeat(6, 200px);
+  grid-gap: 1rem;
+  grid-auto-flow: dense;
+  
   position: relative;
   z-index: 1;
   background-color: $light-color;
@@ -48,6 +49,7 @@ body {
     border-bottom: 2px solid $primary-color;
     margin: 10px;
     width: 17.5%;
+    width: 100%;
     height: min-content;
     display: flex;
     cursor: pointer;
@@ -81,11 +83,17 @@ body {
     }
   }
 
-  @media only all and (max-width: 1200px) {
-    article {
-      width: 31%;
-    }
+  article:nth-child(4n) {
+    grid-column: span 2;
+    grid-row: span 2;
   }
+
+  article:nth-child(8n) {
+    grid-column: span 3;
+    grid-row: span 3;
+  }
+
+
   @media only all and (max-width: 900px) {
     :before {
       right: 0;
@@ -93,15 +101,6 @@ body {
       height: 2px;
       width: 100%;
       border-top: 5px solid $primary-color;
-    }
-
-    article {
-      width: 47%;
-    }
-  }
-  @media only all and (max-width: 600px) {
-    article {
-      width: 100%;
     }
   }
 }
