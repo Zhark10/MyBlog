@@ -59,6 +59,17 @@ $newspaper-bg: url(https://subtlepatterns.com/patterns/lightpaperfibers.png);
   }
 }
 
+footer {
+  width: 100%;
+  margin-top: 18px;
+  padding: 18px 0;
+  background: $primary-color;
+  color: $light-color;
+  font-weight: 700;
+  font-size: 18px;
+  text-align: center;
+}
+
 *::-webkit-scrollbar {
   width: 4px;
 }

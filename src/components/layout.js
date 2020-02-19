@@ -20,9 +20,9 @@ const Layout = ({ location, title, children }) => {
             color: `inherit`,
           }}
           to="/"
+          swipe
+          direction="right"
           duration={1}
-          hex="#243040"
-          paintDrip
         >
           <div className="title">{title}</div>
         </AniLink>
@@ -43,9 +43,9 @@ const Layout = ({ location, title, children }) => {
             color: `inherit`,
           }}
           to="/"
-          hex="#243040"
+          swipe
+          direction="right"
           duration={1}
-          paintDrip
         >
           &#8249; {title}
         </AniLink>
@@ -53,23 +53,10 @@ const Layout = ({ location, title, children }) => {
     )
   }
   return (
-    <div
-      style={{
-        marginLeft: `auto`,
-        marginRight: `auto`,
-        maxWidth: "100%",
-        // padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-      }}
-    >
+    <div>
       <header>{header}</header>
       <main>{children}</main>
-      <footer
-        style={{
-          margin: "0 16px",
-          display: "flex",
-          justifyContent: "flex-end",
-        }}
-      >
+      <footer>
         © {new Date().getFullYear()}, Йошкар-Ола
         {` `}
       </footer>

@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
@@ -36,7 +37,7 @@ const BlogIndex = ({ data, location }) => {
     <>
       <div id="paper-back">
         <nav>
-          <div className="close" onClick={toggleHamburgerIcon}/>
+          <div className="close" onClick={toggleHamburgerIcon} />
           <a href="https://vk.com/a.zharavin">Профиль ВК</a>
           <a href="#">Обо мне</a>
           <a href="#">Работа</a>
@@ -60,6 +61,7 @@ const BlogIndex = ({ data, location }) => {
                     style={{ boxShadow: `none` }}
                     to={node.fields.slug}
                     swipe
+                    direction="left"
                     duration={1}
                   >
                     <header>
@@ -72,15 +74,11 @@ const BlogIndex = ({ data, location }) => {
                           __html: node.frontmatter.description || node.excerpt,
                         }}
                       />
-                      <section
-                        // eslint-disable-next-line react/no-danger
-                        dangerouslySetInnerHTML={{
-                          __html: node.frontmatter.image,
-                        }}
+                      <img
+                        src={node.frontmatter.image}
                         style={{
                           textAlign: "center",
-                          width: "100px",
-                          height: "100px",
+                          width: "100%",
                         }}
                       />
                     </section>
@@ -122,6 +120,7 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             title
             description
+            image
           }
         }
       }

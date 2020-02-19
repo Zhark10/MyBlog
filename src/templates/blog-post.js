@@ -86,7 +86,8 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
                   }}
                   to={previous.fields.slug}
                   swipe
-                  direction="up"
+                  duration={1}
+                  direction="right"
                 >
                   &#8249; {previous.frontmatter.title}
                 </AniLink>
@@ -107,7 +108,8 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
                   }}
                   to={next.fields.slug}
                   swipe
-                  direction="up"
+                  duration={1}
+                  direction="left"
                 >
                   {next.frontmatter.title} &#8250;
                 </AniLink>
