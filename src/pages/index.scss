@@ -22,13 +22,13 @@ body {
 .articles {
   background: $newspaper-bg;
   width: 100%;
-  padding: 0 32px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  grid-template-rows: repeat(6, 200px);
-  grid-gap: 1rem;
-  grid-auto-flow: dense;
-  
+  display: flex;
+  flex-direction: column;
+  max-height: 120vh;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+
   position: relative;
   z-index: 1;
   background-color: $light-color;
@@ -48,8 +48,7 @@ body {
     border-right: 2px solid $primary-color;
     border-bottom: 2px solid $primary-color;
     margin: 10px;
-    width: 17.5%;
-    width: 100%;
+    width: 18.5%;
     height: min-content;
     display: flex;
     cursor: pointer;
@@ -82,19 +81,27 @@ body {
       padding: 16px 16px 0 16px;
     }
   }
+}
 
-  article:nth-child(4n) {
-    grid-column: span 2;
-    grid-row: span 2;
+@media only all and (max-width: 1300px) {
+  .articles {
+    max-height: 150vh;
+    article {
+      width: 31%;
+    }
   }
-
-  article:nth-child(8n) {
-    grid-column: span 3;
-    grid-row: span 3;
+}
+@media only all and (max-width: 1200px) {
+  .articles {
+    max-height: 200vh;
+    article {
+      width: 31%;
+    }
   }
-
-
-  @media only all and (max-width: 900px) {
+}
+@media only all and (max-width: 900px) {
+  .articles {
+    max-height: 300vh;
     :before {
       right: 0;
       top: 0;
@@ -102,6 +109,28 @@ body {
       width: 100%;
       border-top: 5px solid $primary-color;
     }
+
+    article {
+      width: 47%;
+    }
+  }
+}
+@media only all and (max-width: 600px) {
+  .articles {
+    max-height: 100%;
+    article {
+      width: 100%;
+    }
+  }
+}
+
+@media only all and (max-width: 900px) {
+  :before {
+    right: 0;
+    top: 0;
+    height: 2px;
+    width: 100%;
+    border-top: 5px solid $primary-color;
   }
 }
 
@@ -120,7 +149,7 @@ body {
   left: 0;
   font-size: 33px;
   background: $primary-color;
-  
+
   * {
     background: $primary-color;
   }
