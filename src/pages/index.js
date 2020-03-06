@@ -22,11 +22,12 @@ const BlogIndex = ({ data, location }) => {
 
   const transformStyles = hamburgerVisible
     ? {
-        transform: "rotate(10deg)",
+        transform: "rotate(0deg)",
         transformOrigin: "bottom",
         transition: "1s",
       }
     : {
+        transform: "rotate(-20deg)",
         transition: "1s",
       }
 
