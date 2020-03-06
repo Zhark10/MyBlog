@@ -20,16 +20,20 @@ const BlogIndex = ({ data, location }) => {
     setHamburgerVisible(current => !current)
   }, [hamburgerVisible])
 
-  const transformStyles = hamburgerVisible
-    ? {
-        transform: "rotate(0deg)",
-        transformOrigin: "bottom",
-        transition: "1s",
-      }
-    : {
-        transform: "rotate(-20deg)",
-        transition: "1s",
-      }
+  let transformStyles = "newspaper"
+
+  if (hamburgerVisible) {
+    transformStyles += "--animate"
+  }
+  // ? {
+  //     transform: "rotate(0deg)",
+  //     transformOrigin: "bottom",
+  //     transition: "1s",
+  //   }
+  // : {
+  //     transform: "rotate(-20deg)",
+  //     transition: "1s",
+  //   }
 
   const siteTitle = data.site.siteMetadata.title
   const posts = data.allMarkdownRemark.edges
@@ -45,7 +49,7 @@ const BlogIndex = ({ data, location }) => {
           <a href="#">Контакты</a>
         </nav>
       </div>
-      <div style={transformStyles}>
+      <div className={transformStyles}>
         <Layout location={location} title={siteTitle}>
           <div className="hamburger" onClick={toggleHamburgerIcon}>
             <span />
