@@ -25,15 +25,6 @@ const BlogIndex = ({ data, location }) => {
   if (hamburgerVisible) {
     transformStyles += "--animate"
   }
-  // ? {
-  //     transform: "rotate(0deg)",
-  //     transformOrigin: "bottom",
-  //     transition: "1s",
-  //   }
-  // : {
-  //     transform: "rotate(-20deg)",
-  //     transition: "1s",
-  //   }
 
   const siteTitle = data.site.siteMetadata.title
   const posts = data.allMarkdownRemark.edges
@@ -55,7 +46,7 @@ const BlogIndex = ({ data, location }) => {
             <span />
           </div>
           <SEO title="All posts" />
-          <Bio />
+          <Bio animation={hamburgerVisible} />
           <div className="articles">
             {posts.map(({ node }, index) => {
               const title = node.frontmatter.title || node.fields.slug

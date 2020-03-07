@@ -4,7 +4,7 @@ import Image from "gatsby-image"
 
 import "./bio.scss"
 
-const Bio = () => {
+const Bio = ({ animation }) => {
   const data = useStaticQuery(graphql`
     query BioQuery {
       avatar: file(absolutePath: { regex: "/profile-pic.png/" }) {
@@ -23,6 +23,12 @@ const Bio = () => {
     }
   `)
 
+  let transformStyles = "biography-image"
+
+  if (animation) {
+    transformStyles += "--animate"
+  }
+
   const { author, siteUrl } = data.site.siteMetadata
   return (
     <div className="bio-box">
@@ -30,7 +36,7 @@ const Bio = () => {
         <Image
           fixed={data.avatar.childImageSharp.fixed}
           alt={author}
-          className="biography-image"
+          className={transformStyles}
         />
         <div className="biography-text">
           Меня зовут <strong>{author}</strong>. Скорее всего, ты попал(-а) сюда

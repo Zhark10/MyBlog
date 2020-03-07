@@ -4,7 +4,7 @@ var START_URL = process.env.NODE_ENV === "production" ? "/started-blog/" : "/"
 module.exports = {
   pathPrefix: START_URL,
   siteMetadata: {
-    title: `Блог стихов`,
+    title: `Жизнь, стихи и мысли`,
     author: `Жаравин Аркадий`,
     description: `Просто решил, что все это должно где-то храниться и быть доступным для тех, кого интересует поэзия`,
     siteUrl: `https://vk.com/a.zharavin`,
