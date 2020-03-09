@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
@@ -46,14 +47,25 @@ const BlogIndex = ({ data, location }) => {
           <a href="#">Контакты</a>
         </nav>
         <div className="current-date">
-          <div>{currentMonthToText}</div>
-          <div>{currentYear}</div>
+          <div className="current-date--month">{currentMonthToText}</div>
+          <div className="current-date--year">{currentYear}</div>
+        </div>
+        <div className="random-text">
+          "Еще не придумал, что именно, но уже захотел сюда что-то написать"
+          <br />
+          <br />© Я
         </div>
       </div>
       <div className={transformStyles}>
+        <div
+          className="newspaper-to-show-message"
+          onClick={toggleHamburgerIcon}
+          hidden={hamburgerVisible}
+        >
+          <div className="newspaper-to-show-message--text">Прочитать</div>
+        </div>
         <Layout location={location} title={siteTitle}>
           <div className="hamburger" onClick={toggleHamburgerIcon}>
-            {/* <span /> */}
             &#9736;
           </div>
           <SEO title="All posts" />

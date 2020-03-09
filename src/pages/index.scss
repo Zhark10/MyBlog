@@ -1,8 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway");
 @import url("https://fonts.googleapis.com/css?family=Lobster&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Kurale&display=swap&subset=cyrillic,cyrillic-ext");
+@import url("https://fonts.googleapis.com/css?family=Oswald:700&display=swap");
 $primary-color: #243040;
-$light-color: #fff8ed;
+$light-color: #f0eeec;
 $newspaper-bg: url(https://subtlepatterns.com/patterns/lightpaperfibers.png);
 
 * {
@@ -162,7 +163,7 @@ body {
       display: flex;
       margin: 10px 0;
       padding: 4px 16px;
-      font-family: 'Kurale', serif;
+      font-family: "Kurale", serif;
       font-size: 20px;
       font-weight: 900;
       text-transform: uppercase;
@@ -172,25 +173,78 @@ body {
   }
 
   .current-date {
-    margin: 10% 0 0 16px;
+    font-family: "Oswald", sans-serif;
+    margin: 8% 0 0 64px;
+    color: $light-color;
+    opacity: 0.5;
+    display: flex;
+    flex-direction: column;
+    width: max-content;
 
-    ::first-child() {
-      font-size: 48px;
+    &--month {
+      font-size: 98px;
+      line-height: 1;
     }
+
+    &--year {
+      font-size: 48px;
+      line-height: 1;
+    }
+  }
+
+  .random-text {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 32px;
+    max-width: 40%;
+    text-align: right;
+    line-height: 1.2;
+    font-family: "Oswald", sans-serif;
+    color: $light-color;
+    opacity: 0.5;
   }
 }
 
 .newspaper {
   transform: rotate(15deg) scale(0.8) translateY(-100px) translateX(-100px);
   transform-origin: bottom;
-  transition: all 2s ease-in;
+  transition: all 1s ease-in;
   border-left: 16px solid $primary-color;
+
+  .newspaper-to-show-message {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 99999;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $primary-color;
+    opacity: 0;
+    transition: 0.5s;
+    
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &--text {
+      font-family: "Oswald", sans-serif;
+      border-radius: 12px;
+      padding: 10px;
+      background: $primary-color;
+      font-size: 32px;
+      border: 4px solid $light-color;
+      color: $light-color;
+    }
+  }
 
   &--animate {
     border-left: 1px solid $primary-color;
     transform: rotate(0) scale(1) translateY(0) translateX(0);
     transform-origin: bottom;
-    transition: all 2s ease-in;
+    transition: all 1s ease-in;
   }
 }
 
