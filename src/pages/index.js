@@ -29,21 +29,32 @@ const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
   const posts = data.allMarkdownRemark.edges
 
+  const date = new Date()
+  const currentMonth = date.getMonth()
+  const currentMonthToText =
+    currentMonth < 10 ? `0${currentMonth}` : currentMonth
+
+  const currentYear = date.getFullYear()
+
   return (
     <>
       <div id="paper-back">
         <nav>
-          <div className="close" onClick={toggleHamburgerIcon} />
           <a href="https://vk.com/a.zharavin">Профиль ВК</a>
           <a href="#">Обо мне</a>
           <a href="#">Работа</a>
           <a href="#">Контакты</a>
         </nav>
+        <div className="current-date">
+          <div>{currentMonthToText}</div>
+          <div>{currentYear}</div>
+        </div>
       </div>
       <div className={transformStyles}>
         <Layout location={location} title={siteTitle}>
           <div className="hamburger" onClick={toggleHamburgerIcon}>
-            <span />
+            {/* <span /> */}
+            &#9736;
           </div>
           <SEO title="All posts" />
           <Bio animation={hamburgerVisible} />
