@@ -13,6 +13,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 import "./index.scss"
+import { isMobile } from "../utils/mobile-detect"
 
 const BlogIndex = ({ data, location }) => {
   const [hamburgerVisible, setHamburgerVisible] = React.useState(false)
@@ -65,7 +66,11 @@ const BlogIndex = ({ data, location }) => {
           <div className="newspaper-to-show-message--text">Прочитать</div>
         </div>
         <Layout location={location} title={siteTitle}>
-          <div className="hamburger" onClick={toggleHamburgerIcon}>
+          <div
+            className="hamburger"
+            onClick={toggleHamburgerIcon}
+            hidden={isMobile}
+          >
             &#9736;
           </div>
           <SEO title="All posts" />
